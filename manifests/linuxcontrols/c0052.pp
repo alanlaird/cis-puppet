@@ -6,5 +6,6 @@
 class cis::linuxcontrols::c0052 {
   service {'auditd':
     enable => true,
+    provider => redhat,
     }
 }
