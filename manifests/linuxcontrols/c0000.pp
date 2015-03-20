@@ -35,7 +35,10 @@ class cis::linuxcontrols::c0000 {
     options => 'nodev',
   }
 
-  mount {'/dev/shm':
-    options => 'nodev,nosuid,noexec',
+  # /dev/shm not found in centos7
+  if $operatingsystemmajrelease == "6" {
+    mount {'/dev/shm':
+      options => 'nodev,nosuid,noexec',
+    }
   }
 }
