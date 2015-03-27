@@ -4,10 +4,23 @@
 # enabled and the YUM configuration file permissions are restrictive.
 #
 class cis::linuxcontrols::c0003 {
+  # not using this template any longer
+  #file {'/etc/yum.conf':
+  #  source  => 'puppet:///modules/cis/el6/etc/yum.conf',
+  #  owner   => root,
+  #  group   => root,
+  #  mode    => '0640',
+  #}
   file {'/etc/yum.conf':
-    source  => 'puppet:///modules/cis/el6/etc/yum.conf',
     owner   => root,
     group   => root,
     mode    => '0640',
+  }
+  # puppetlabs/inifile
+  ini_setting { 'improve security':
+    ensure  => present,
+    section => 'main',
+    setting => 'gpgcheck',
+    value   => '1',
   }
 }
