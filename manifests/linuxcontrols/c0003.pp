@@ -25,7 +25,7 @@ class cis::linuxcontrols::c0003 {
   }
   # update the system on the 6th of the month (at random minutes after 1am)
   cron { 'system-update':
-    command => 'yum clean all; yum -q -y update'
+    command => 'yum clean all; yum -q -y update',
     user    => 'root',
     minute  => fqdn_rand(60),
     hour    => 1,
