@@ -19,6 +19,7 @@ class cis::linuxcontrols::c0003 {
   # puppetlabs/inifile
   ini_setting { 'improve security':
     ensure  => present,
+    path    => 'etc/yum/conf',
     section => 'main',
     setting => 'gpgcheck',
     value   => '1',
