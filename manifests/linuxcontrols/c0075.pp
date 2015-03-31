@@ -4,8 +4,10 @@
 #
 
 class cis::linuxcontrols::c0075 {
-  user {'root':
-    uid => 0,
-    gid => 0,
-  }
+  #user {'root':
+  #  uid => 0,
+  #  gid => 0,
+  #}
+  #
+  # root is already enforced
 }
