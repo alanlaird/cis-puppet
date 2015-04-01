@@ -28,4 +28,5 @@ class cis::linuxcontrols::c0014 {
       "set domain[last()]/item $item",
       "set domain[last()]/value $value",
     ],
+  }
 }
