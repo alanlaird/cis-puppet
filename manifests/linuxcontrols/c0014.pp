@@ -10,7 +10,7 @@ class cis::linuxcontrols::c0014 {
   #  group   => root,
   #  mode    => '0640',
   #}
-  augeas { "limits_conf/*/hard/core":
+  augeas { "limits_conf_core":
     $domain   = '*',
     $type     = 'hard',
     $item     = 'core',
