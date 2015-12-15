@@ -1,9 +1,9 @@
-# Class cis::el6::5_1_4
+# Class cis::el6::v5_1_4
 #
 # CIS Security Benchmark for RHEL6
 #
 
-class cis::el6::5_1_4   {
+class cis::el6::v5_1_4   {
   include cis::linuxcontrols::c0044
   include cis::linuxcontrols::c0045
   include cis::linuxcontrols::c0046
